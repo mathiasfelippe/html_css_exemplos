@@ -1,10 +1,38 @@
 /* === LAYOUT COM FLEXBOX === */
 
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Inclui padding e border no tamanho */
 }
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Habilita o recurso (Flex-box) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ }
 
+ /* Estilos do Header ( Cabeçalho) */
+ .cabecalho-principal {
+    background: linear-gradient(90deg, rgb(0, 0, 146), rgb(47, 47, 244));
+    color: white;
+    padding: 20px;
+ }
+ .menu-principal ul {
+    display: flex; /*Deixa os links na vertical lado a lado */
+    list-style: none;/* Retira a bolinha da lsita */
+    gap: 20px; /*espaçamento entre os itens */
+    justify-content: center; /* Centraliza usando (Flex-Box)*/
+ }
 
-/* Continuar digitação (Aqui)  */
+ .menu-principal a {
+    color: white;
+    text-decoration: none; /* Retira o traço*/
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+ }
+.menu-principal a:hover{
+    background-color: aliceblue;
+}

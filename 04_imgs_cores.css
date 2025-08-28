@@ -1,1 +1,26 @@
-/* Digitação (Aqui) */
+h1{
+    /* offset-x   offset-y   blur   color */
+    text-shadow: 2px 1px 2px #000;
+}
+
+
+img{
+    border: 3px solid (1.10);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+
+img:hover {
+    /transform: scale(1.10);/
+   /* transform: rotate(-45deg); */
+   transform: translateY(10px);
+    border-color: blue;
+    opacity: 0.3; /* Tranparência */
+}
+
+.img-link {
+    width: 150px;
+    height: 50px;
+    object-fit: contain; /Mantém a proporção da imagem/
+}

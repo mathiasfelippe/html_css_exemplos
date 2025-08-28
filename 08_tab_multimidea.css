@@ -1,64 +1,79 @@
-/* === CSS GRID E MULTIMÍDIA === */
+/* === LAYOUT COM FLEXBOX === */
 
-/* Continuar digitação (Abaixo em Multimídea)  */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no tamanho */
+}
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Habilita o recurso (Flex-box) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ }
 
-body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f8f9fa;
+ /* Estilos do Header ( Cabeçalho) */
+ .cabecalho-principal {
+    background: linear-gradient(90deg, rgb(92, 13, 160), rgb(78, 0, 180), rgb(0, 0, 119));
+    color: white;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+ }
+ .menu-principal ul {
+    display: flex; /*Deixa os links na vertical lado a lado */
+    list-style: none;/* Retira a bolinha da lsita */
+    gap: 20px; /*espaçamento entre os itens */
+    justify-content: center; /* Centraliza usando (Flex-Box)*/
+ }
+
+ .menu-principal a {
+    color: white;
+    text-decoration: none; /* Retira o traço*/
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+ }
+.menu-principal a:hover{
+    background-color: rgb(80, 93, 175);
+    color: rgb(236, 217, 255);
 }
 
-h1, h2 {
-    color: #2c3e50;
+.cabecalho-principal{
+    flex: 3; /* Ocupa 3/4 do espaço */
+    padding: 20px;
 }
-
-/* === TABELA COM GRID-LIKE STYLING === */
-.tabela-relatorio {
-    width: 100%;
-    border-collapse: collapse;
+ .barra-lateral {
+    flex: 1; /* Ocupa 1/4 do espaço */
+    background-color: rgb(150, 147, 255);
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content; /* Altura ajustável do conteúdo */
+ }
+ /* Estilo articles */
+ .secao-destaque
+ .artigo-blog
+ .secao-serviços {
     background: white;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    overflow: hidden; /* Esconde bordas que excedem */
-    border-radius: 10px;
-}
-
-.tabela-relatorio caption {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+ }
+ .artigo-blog header {
+    border-bottom: 2px solid rgb(87, 87, 255);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+ }
+  time{
+    color: aliceblue;
+    font-style: italic;
+  }
+  /* Footer (Rodapé) */
+  .rodape-principal {
+    background-color: rgba(0, 0, 85, 0.627);
     color: white;
-}
-
-.tabela-relatorio th {
-    background-color: #34495e;
-    color: white;
-    padding: 15px;
-    text-align: left;
-}
-
-.tabela-relatorio td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.num-right {
-    text-align: right;
-    font-family: 'Courier New', monospace; /* Fonte monoespaçada para números */
-}
-
-.total-linha {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.tabela-relatorio tfoot {
-    background-color: #ffeb3b;
-    font-weight: bold;
-}
-
-/* === ESTILIZANDO MULTIMÍDIA === */
-
-/* Container para vídeos e áudio */
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+/* Continuar digitação (Aqui)  */
