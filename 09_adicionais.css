@@ -2,18 +2,46 @@
 
 body {
     font-family: Georgia, serif;
-    background: linear-gradient(45deg, #a8edea, #fed6e3);
+    /* background: linear-gradient(45deg, #a8edea, #fed6e3); */
     padding: 30px;
     line-height: 1.8;
+    animation: rainbow 2s linear infinite;
 }
 
 h1 {
     text-align: center;
     color: #2c3e50;
-    animation: fadeIn 2s ease-in; /* Animação de entrada */
+    /* Animação de entrada */
+    /* animation: fadeIn 5s ease-in; */
+    animation: rotate3d 2s ease-in; /* Animação de entrada*/
 }
 
 /* === KEYFRAMES (ANIMAÇÕES) === */
+
+/* Animação de aparecer Texto de forma gradativa */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Rotação do texto */
+@keyframes rotate3d {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+    25% {transform: rotateX(90deg) rotateY(0deg);}
+    50% {transform: rotateX(90deg) rotateY(90deg);}
+    75% {transform: rotateX(0deg) rotateY(90deg);}
+    100% {transform: rotateX(0deg) rotateY(0deg);}
+}
+ /* Altera a cor do texto */
+ @keyframes rainbow {
+    0% {background-color: red;}
+    16% {background-color: orange;}
+    33% {background-color: yellow;}
+    50% {background-color: green;}
+    66% {background-color: blue;}
+    83% {background-color: purple;}
+    100% {background-color: red;}
+ }
 
 
 /* Continuar digitação (Aqui)  */
@@ -116,3 +144,4 @@ figcaption {
     transform: translateX(10px);
     box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
 }
+
